@@ -1,9 +1,18 @@
 """
-Tic-Tac-Toe (Lab Starter)
+Tic-Tac-Toe (Lab)
 
-Run with:  python3 main.py
+Run with:
+    python3 main.py
 
-Click a cell to place your symbol.
+Controls:
+    Click board cells to play X.
+    R = New Round
+    M = Reset Match
+
+The UI also provides clickable controls for:
+    - Choosing who starts the next round
+    - Starting a new round
+    - Resetting the entire match
 """
 
 import pygame
@@ -14,23 +23,32 @@ from game.renderer import WINDOW_SIZE
 
 def main():
     pygame.init()
+
     screen = pygame.display.set_mode(WINDOW_SIZE)
     pygame.display.set_caption("Tic-Tac-Toe")
+
     clock = pygame.time.Clock()
+
     font = pygame.font.SysFont("consolas", 22)
+    small_font = pygame.font.SysFont("consolas", 18)
 
     engine = GameEngine()
+
     running = True
+
     while running:
         for event in pygame.event.get():
+
             if event.type == pygame.QUIT:
                 running = False
+
             elif event.type == pygame.MOUSEBUTTONDOWN:
                 engine.handle_click(event.pos)
+
             elif event.type == pygame.KEYDOWN:
                 engine.handle_keydown(event.key)
 
-        engine.draw(screen, font)
+        engine.draw(screen, font, small_font)
 
         pygame.display.flip()
         clock.tick(60)

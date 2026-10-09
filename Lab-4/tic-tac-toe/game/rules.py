@@ -10,11 +10,19 @@ def check_winner(board):
 
     # Rows
     for r in range(3):
-        lines.append([board[r][0], board[r][1], board[r][2]])
+        lines.append([
+            board[r][0],
+            board[r][1],
+            board[r][2]
+        ])
 
     # Columns
     for c in range(3):
-        lines.append([board[0][c], board[1][c], board[2][c]])
+        lines.append([
+            board[0][c],
+            board[1][c],
+            board[2][c]
+        ])
 
     # Main diagonal
     lines.append([
@@ -32,7 +40,10 @@ def check_winner(board):
 
     # Check all 8 winning lines
     for line in lines:
-        if line[0] is not None and line[0] == line[1] == line[2]:
+        if (
+            line[0] is not None
+            and line[0] == line[1] == line[2]
+        ):
             return line[0]
 
     return None
