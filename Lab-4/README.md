@@ -142,3 +142,17 @@ Submission is only the following three things:
 - [ ] A 10-second video of gameplay **before** your changes, showing the bug/broken behavior
 - [ ] A 10-second video of gameplay **after** your changes, showing the bug fixed and the new features working
 - [ ] The Chat/LLM used page link, with the complete chat history
+
+---
+
+## Submission Notes
+
+All four tasks are completed and tested manually:
+
+- Task 1: diagonal wins detected, a winning last move scored as a win (not a draw), board locked after a round ends.
+- Task 2: persistent scoreboard (X / O / Draws) that survives a new round and clears only on a full match reset.
+- Task 3: clicking an occupied cell is rejected and the turn does not change. The fix was made together with an earlier task, so it has no separate commit.
+- Task 4: first-player choice (applies from the next round) and separate New Round / Reset Match controls.
+
+Before/after videos and the full chat history (PDF) are in this folder.
+
