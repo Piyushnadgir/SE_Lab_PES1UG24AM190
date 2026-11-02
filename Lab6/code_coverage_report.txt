@@ -1,0 +1,6 @@
+Name                                  Stmts   Miss  Cover   Missing
+-------------------------------------------------------------------
+CodeCoverageTest_bookstore_trade.py      55      0   100%
+bookstore_trade_in.py                    57      0   100%
+-------------------------------------------------------------------
+TOTAL                                   112      0   100%
